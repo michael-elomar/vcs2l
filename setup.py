@@ -14,7 +14,7 @@ with open(
 setup(
     name='vcs2l',
     version=__version__,
-    requires_python='>=3.6',
+    python_requires='>=3.6',
     install_requires=[
         "importlib_metadata; python_version<'3.8' and python_version>='3.7'",
         'PyYAML',
@@ -29,7 +29,7 @@ setup(
             'sphinx-rtd-theme',
         ],
     },
-    packages=find_packages(),
+    packages=find_packages(exclude=['test']),
     author='Dirk Thomas',
     author_email='web@dirk-thomas.net',
     maintainer='ROS Infrastructure Team',
